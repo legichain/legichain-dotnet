@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Legichain</RootNamespace>
+    <AssemblyName>Legichain</AssemblyName>
+
+    <PackageId>Legichain</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Legichain</Authors>
+    <Company>Legichain</Company>
+    <Product>Legichain .NET SDK</Product>
+    <Description>Official .NET client for the Legichain AML, KYC, and Travel Rule API. Sanctions/PEP/adverse-media screening for individuals, companies, and crypto wallets — sub-30 ms median latency, RFC 7807 problem details, HMAC-SHA256 webhook verifier.</Description>
+    <PackageTags>aml;kyc;sanctions;pep;screening;compliance;travel-rule;ofac;legichain;crypto</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://legichain.com</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/legichain/legichain-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.1" />
+  </ItemGroup>
+</Project>

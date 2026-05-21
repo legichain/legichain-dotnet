@@ -1,0 +1,22 @@
+# Build output
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+
+# NuGet
+*.nupkg
+*.snupkg
+nupkgs/
+.nuget/
+
+# Local secrets — contains NuGet API key
+nuget.config.local
+*.user
+
+# IDE
+.vs/
+.idea/
+*.suo
+.vscode/
