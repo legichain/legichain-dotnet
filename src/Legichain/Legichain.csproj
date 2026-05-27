@@ -8,7 +8,7 @@
     <AssemblyName>Legichain</AssemblyName>
 
     <PackageId>Legichain</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Legichain</Authors>
     <Company>Legichain</Company>
     <Product>Legichain .NET SDK</Product>

@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.2.0 — 2026-05-28
+
+* **KYC** identity verification — `KycCreateApplicationAsync`,
+  `KycStatusAsync`, `KycUploadDocumentAsync`, `KycSubmitNfcAsync`
+  (+ `KycNfcAccessErrorAsync` convenience), `KycUploadSelfieAsync`,
+  `KycLivenessChallengeAsync`, `KycSubmitLivenessAsync`,
+  `KycSubmitAsync`, `KycRetryAsync`, `KycExtendTtlAsync`.
+  * Tenant admin: `KycAdminListAsync`, `KycAdminDetailAsync`,
+    `KycAdminApproveAsync`, `KycAdminRejectAsync`,
+    `KycAdminRequestRetryAsync`.
+* **Address Verification** — `AddressVerificationCreateAsync`,
+  `AddressVerificationUploadProofAsync`,
+  `AddressVerificationSubmitAsync`,
+  `AddressVerificationStatusAsync`.
+* **Personas** — `PersonaCreateAsync`, `PersonaListAsync`,
+  `PersonaGetAsync`.
+* `PostJsonAsync` / `GetJsonAsync` overloads accept `clientToken` →
+  `X-KYC-Client-Token` header for per-application calls.
+* Server-side: forwards base64 NFC chip bytes produced by a mobile
+  client; this SDK never reads chips itself.
+
+# Changelog
+
 ## [0.1.0] — 2026-05-21
 Initial public release.
 
