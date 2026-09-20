@@ -1,3 +1,20 @@
+# Legichain dotnet SDK v2
+
+Official SDK for the existing Legichain API. [KYC v2 integration and migration](https://github.com/legichain/legichain-dotnet/blob/main/KYC-V2.md)
+contains the current wire contract, check flags, asynchronous evidence and
+submission behavior. Version: **2.0.0**; publication status is tracked separately.
+
+```csharp
+using var client = new LegichainClient(apiToken);
+var flow = await KycSession.StartAsync(client, new { subject_external_id = "customer-42" }, "customer-42-application");
+var receipt = await flow.EvidenceAsync("documents", body, "customer-42-front-capture-1");
+await flow.WaitAsync(receipt.OperationId, TimeSpan.FromMinutes(2));
+// Upload all remaining configured evidence, then:
+var submission = await flow.SubmitAsync();
+```
+
+---
+
 # Legichain .NET SDK
 
 Official .NET client for the **[Legichain](https://legichain.com)** AML, KYC

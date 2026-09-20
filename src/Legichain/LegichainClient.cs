@@ -32,7 +32,7 @@ public sealed class LegichainClient : IDisposable
     /// billing and knows which region owns the rest, so it is a safe place
     /// to start from when you do not know.</summary>
     private const string DefaultBaseUrl = "https://api.legichain.com";
-    private const string Version        = "0.1.0";
+    private const string Version        = "2.0.0";
 
     /// <summary>The API refusing a call for an account it does not serve.</summary>
     private const string WrongRegion    = "REG_001_WRONG_REGION";

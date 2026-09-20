@@ -20,3 +20,5 @@ nuget.config.local
 .idea/
 *.suo
 .vscode/
+
+artifacts/
