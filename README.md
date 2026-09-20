@@ -21,7 +21,7 @@ Official .NET client for the **[Legichain](https://legichain.com)** AML, KYC
 and Travel Rule API.
 
 ```powershell
-dotnet add package Legichain --version 0.1.0
+dotnet add package Legichain --version 2.0.0
 ```
 
 [![NuGet](https://img.shields.io/nuget/v/Legichain.svg)](https://www.nuget.org/packages/Legichain/)
